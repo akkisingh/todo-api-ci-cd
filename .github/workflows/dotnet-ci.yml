@@ -29,5 +29,4 @@ jobs:
         run: dotnet build WebApplication1/WebApplication1/WebApplication1.csproj --no-restore
   
       - name: Run tests
-        if: false
-        run: echo "No tests to run"
+        run: dotnet test --no-build WebApplication1\TestProject1\ToDoApi.Tests.csproj --verbosity normal
