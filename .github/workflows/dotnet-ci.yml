@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
     branches:
-      -main
+      - main
 
 
 jobs:
@@ -23,10 +23,10 @@ jobs:
           dotnet-version: '8.0.x'
   
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore WebApplication1\WebApplication1.sln
   
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build --no-restore dotnet restore WebApplication1\WebApplication1.sln
   
       - name: Run tests
         run: dotnet test --no-build --verbosity normal
